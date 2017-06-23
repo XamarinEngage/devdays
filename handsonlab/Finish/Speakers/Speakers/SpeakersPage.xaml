@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Speakers.SpeakersPage"
+             Title="Speakers">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Clicked="MenuItem_OnClicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <Button Text="Sync Facilitators" Clicked="SyncbuttonCLicked" />
+
+            <ActivityIndicator x:Name="Loader" IsVisible="False" />
+
+            <ListView x:Name="SpeakersList" ItemSelected="SpeakersList_OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Detail="{Binding Title}" Text="{Binding Name}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout></ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Speakers.AddSpeakerPage"
+             Title="Add Speaker">
+
+    <StackLayout VerticalOptions="FillAndExpand">
+        <Entry Placeholder="Speaker Name..." Text="{Binding Name}" />
+        <Entry Placeholder="Speaker Title..." Text="{Binding Title}" />
+        <Entry Placeholder="Speaker Description..." Text="{Binding Description}" />
+        <Button Text="Add Speaker" Clicked="Button_OnClicked" VerticalOptions="End" />
+        <ActivityIndicator x:Name="Loader" IsVisible="False" />
+
+    </StackLayout>
+</ContentPage>
